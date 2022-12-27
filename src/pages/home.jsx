@@ -1,4 +1,4 @@
-import bug from "../img/bug.png"
+import bug from "../img/icon/LogoPokemon.png"
 import "../css/home.css"
 import CardConj from "../components/CardConju"
 import { useEffect } from "react"
