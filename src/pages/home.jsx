@@ -24,7 +24,7 @@ const Home = (props) => {
 				<h1>Qual é o seu</h1>
 				<h1>Pokemon</h1>
 			</div>
-				<img src={imgpoke} alt="imgPoke" />
+				<img src='sas' alt="imgPoke" />
 			<h2>Pokemons iniciais</h2>
 			<div className="col-12 md startPokemons d-flex flex-column align-items-center">
 				<div className="col-6 d-flex justify-content-around">
