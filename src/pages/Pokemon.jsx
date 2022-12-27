@@ -78,7 +78,7 @@ const Pokemon = (props) => {
 			</div>
 			<div className="movePoke col-12 d-flex flex-column align-items-center">
 				<h4>Movimentos</h4>
-				<div className="movesArray d-flex flex-wrap justify-content-around">
+				<div className="movesArray col-12 d-flex flex-wrap align-items-center justify-content-around">
 					{movesPokemon
 						? movesPokemon[0].map((moves, i) => {
 								return (

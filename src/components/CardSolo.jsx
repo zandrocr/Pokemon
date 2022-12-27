@@ -3,6 +3,7 @@ import { ApiCard } from "../api/api"
 import { typeTwo } from "../api/typeTwo"
 import "../css/cardSolo.css"
 import ModalCard from "./ModalCard"
+import "../css/home.css"
 
 const CardSolo = (props) => {
 	const [arrPoke, setArrPoke] = useState([])
@@ -61,41 +62,58 @@ const CardSolo = (props) => {
 			<button onClick={prev} data-buttoncard="prev">
 				Ant
 			</button>
-			<section
-				data-card={typeTwo({id: arrPoke})}
-				onClick={() => setOpenModal(!openModal)}
-				className="col-12 d-flex flex-column align-items-center justify-content-between">
-				<div id="image" className="col-11 col-lg-4 d-flex justify-content-center">
-					<img
-						src={arrPoke.sprites ? spritesDef() : null}
-						alt={arrPoke.name}
-						className="col-12"
-					/>
+			<div className="cardDex col-12 d-flex flex-column align-items-center justify-content-between">
+				<div className="col-6 d-flex justify-content-around">
+					<div data-circle></div>
+					<div data-circle></div>
 				</div>
-				<h6 data-id={typeTwo({id: arrPoke})}># {arrPoke.id}</h6>
-				<div
-					data-eps={typeTwo({id: arrPoke})}
-					className="col-12 d-flex flex-column align-items-center justify-content-around">
-					<div className="col-11 d-flex justify-content-center">
-						<h3>{arrPoke.name}</h3>
+				<section
+					data-card={typeTwo({ id: arrPoke })}
+					onClick={() => setOpenModal(!openModal)}
+					className="col-12 col-lg-10 d-flex flex-column align-items-center justify-content-between">
+					<div id="image" className="col-11 col-lg-4 d-flex justify-content-center">
+						<img
+							src={arrPoke.sprites ? spritesDef() : null}
+							alt={arrPoke.name}
+							className="col-12"
+						/>
+					</div>
+					<h6 data-id={typeTwo({ id: arrPoke })}># {arrPoke.id}</h6>
+					<div
+						data-eps={typeTwo({ id: arrPoke })}
+						className="col-12 d-flex flex-column align-items-center justify-content-around">
+						<div className="col-11 d-flex justify-content-center">
+							<h3>{arrPoke.name}</h3>
+						</div>
+					</div>
+				</section>
+				<div className="backHome col-10 d-flex align-items-center justify-content-between">
+					<div data-circle="down"></div>
+					<div data-bugline className="">
+						<div data-line></div>
+						<div data-line></div>
+						<div data-line></div>
+						<div data-line></div>
 					</div>
 				</div>
-			</section>
+			</div>
 			<button data-buttoncard="next" onClick={nex} className="prox">
 				Prox
 			</button>
+			<div className="movi d-flex flex-column align-items-center">
 				<h4>Movimentos</h4>
-			<div className="movePoke col-12 d-flex flex-column align-items-center">
-				<div className="col-12 d-flex flex-wrap justify-content-around">
-					{movesPokemon
-						? movesPokemon[0].map((moves, i) => {
-								return (
-									<h6 key={i} className="col-5 col-lg-2">
-										{moves.move.name}
-									</h6>
-								)
-						  })
-						: null}
+				<div className="movePoke col-12 d-flex flex-column align-items-center">
+					<div className="col-12 d-flex flex-wrap justify-content-around">
+						{movesPokemon
+							? movesPokemon[0].map((moves, i) => {
+									return (
+										<h6 key={i} className="col-5 col-lg-2">
+											{moves.move.name}
+										</h6>
+									)
+							  })
+							: null}
+					</div>
 				</div>
 			</div>
 		</section>
