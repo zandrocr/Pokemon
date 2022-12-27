@@ -1,5 +1,4 @@
-
-import Logopokemon from "../img/icon/logoPokemon.png"
+import imgPoke from "../img/icon/logoPokemon.png"
 import "../css/home.css"
 import CardConj from "../components/CardConju"
 import { useEffect } from "react"
@@ -7,7 +6,7 @@ import { useState } from "react"
 
 const Home = (props) => {
 	useEffect(() => {
-		// window.scrollTo({ top: 0 })
+		window.scrollTo({ top: 0 })
 	}, [])
 
 	const box = document.querySelectorAll(".top")
@@ -23,7 +22,7 @@ const Home = (props) => {
 		<section id="home" className="col-12 d-flex flex-column align-items-center">
 			<div className="top col-12 d-flex flex-column align-items-center justify-content-center">
 				<h1>Qual é o seu</h1>
-				<img id="logo" src={Logopokemon} alt="LogoPokemon" />
+				<img id="logo" src={imgPoke} alt="imgPoke" />
 			</div>
 			<h2>Pokemons iniciais</h2>
 			<div className="col-12 md startPokemons d-flex flex-column align-items-center">
