@@ -1,4 +1,4 @@
-import imgPoke from "../img/icon/logoPokemon.png"
+// import imgPoke from "../img/icon/logoPokemon.png"
 import "../css/home.css"
 import CardConj from "../components/CardConju"
 import { useEffect } from "react"
