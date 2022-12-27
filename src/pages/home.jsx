@@ -22,7 +22,7 @@ const Home = (props) => {
 		<section id="home" className="col-12 d-flex flex-column align-items-center">
 			<div className="top col-12 d-flex flex-column align-items-center justify-content-center">
 				<h1>Qual é o seu</h1>
-				<img id="logo" src="https://assets.pokemon.com/assets/cms2/img/misc/gus/buttons/logo-pokemon-79x45.png" alt="imgPoke" />
+				<img src="https://assets.pokemon.com/assets/cms2/img/misc/gus/buttons/logo-pokemon-79x45.png" alt="imgPoke" />
 			</div>
 			<h2>Pokemons iniciais</h2>
 			<div className="col-12 md startPokemons d-flex flex-column align-items-center">
