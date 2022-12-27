@@ -1,4 +1,4 @@
-// import imgpoke from "../img/icon/close.png"
+import bug from "../img/bug.png"
 import "../css/home.css"
 import CardConj from "../components/CardConju"
 import { useEffect } from "react"
