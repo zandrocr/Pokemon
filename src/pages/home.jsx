@@ -1,4 +1,4 @@
-import bug from "../img/icon/LogoPokemon.png"
+import imgPoke from "../img/icon/LogoPokemon.png"
 import "../css/home.css"
 import CardConj from "../components/CardConju"
 import { useEffect } from "react"
@@ -22,8 +22,7 @@ const Home = (props) => {
 		<section id="home" className="col-12 d-flex flex-column align-items-center">
 			<div className="top col-12 d-flex flex-column align-items-center justify-content-center">
 				<h1>Qual é o seu</h1>
-				{/* <h1>Pokemon</h1> */}
-				<img src={bug} alt="imgPoke" />
+				<img id="logo" src={imgPoke} alt="imgPoke" />
 			</div>
 			<h2>Pokemons iniciais</h2>
 			<div className="col-12 md startPokemons d-flex flex-column align-items-center">
