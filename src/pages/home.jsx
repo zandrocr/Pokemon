@@ -1,4 +1,4 @@
-// import imgPoke from "../img/icon/logoPokemon.png"
+// import imgpoke from "../img/icon/close.png"
 import "../css/home.css"
 import CardConj from "../components/CardConju"
 import { useEffect } from "react"
@@ -23,7 +23,7 @@ const Home = (props) => {
 			<div className="top col-12 d-flex flex-column align-items-center justify-content-center">
 				<h1>Qual é o seu</h1>
 				<h1>Pokemon</h1>
-				{/* <img src="https://assets.pokemon.com/assets/cms2/img/misc/gus/buttons/logo-pokemon-79x45.png" alt="imgPoke" /> */}
+				<img src={imgpoke} alt="imgPoke" />
 			</div>
 			<h2>Pokemons iniciais</h2>
 			<div className="col-12 md startPokemons d-flex flex-column align-items-center">
