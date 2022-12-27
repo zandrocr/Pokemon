@@ -1,0 +1,93 @@
+nav
+    top: 0vh
+    padding: 1vh
+    height: 7vh
+    z-index: 20
+    position: fixed
+    box-shadow: 0px 0px 20px #000000
+
+    [data-buttonmenu]
+        width: 6vh
+        height: 6vh
+        padding: 1vh
+        cursor: pointer
+        border-radius: 100%
+        background: #fbff00
+        box-shadow: 0px 0px 20px #000000
+
+        [data-menu]
+            height: 1vh
+            width: 5vh
+            transition: .5s
+            border-radius: 2vh
+            background: #000000
+            position: absolute
+
+        [data-menu='left']
+            top: 2vh
+            transform: rotate(60deg)
+
+        [data-menu='leftOpen']
+            top: 2vh
+            transform: rotate(30deg)
+
+        [data-menu='right']
+            bottom: 2vh
+            transform: rotate(60deg)
+
+        [data-menu='rightOpen']
+            bottom: 2vh
+            transform: rotate(30deg)
+
+    [data-buttonmenu]
+        img
+            width: 3vh
+
+    [data-buttonmenu='inputBar']
+        height: 6vh
+        width: 6vh
+        display: none
+
+    [data-buttonmenu='closeBar']
+        right: 1vh
+        width: 5vh
+        height: 5vh
+        position: absolute
+
+    [data-modal]
+        padding: 2vh
+        top: 0
+        right: -80vh
+        height: 90vh
+        margin-top: 8vh
+        position: fixed
+        transition: .5s
+        border-radius: 5vh
+        background: #000000
+        box-shadow: 0px 0px 20px #000000
+
+        a
+            color: #fff
+            font-size: 19px
+            font-weight: bold
+
+    [data-modal='open']
+        right: 1vh
+
+
+@media screen and ( max-width: 769px )
+    nav
+        [data-search]
+            left: 0vh
+            top: -10vh
+            z-index: 25
+            height: 8vh
+            transition: .5s
+            position: fixed
+            background: #000000
+
+        [data-search='open']
+            top: 0vh
+
+        [data-buttonmenu='inputBar']
+            display: flex

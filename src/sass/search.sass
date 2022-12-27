@@ -1,0 +1,43 @@
+.search
+    input
+        border: none
+        color: #fff
+        transition: .5s
+        border-radius: 1vh
+        background: #000000
+        border: solid 3px #fff
+        box-shadow: 0px 0px 15px #000000
+        &:focus
+            outline: 0
+            border: solid 3px #fbff00
+
+.result
+    position: fixed
+    top: 7vh
+    right: 1vh
+    padding: 3vh
+    color: #fff
+    overflow-y: scroll
+    max-height: 93vh
+    border-radius: 1vh
+    background: #000000de,
+
+    img
+        width: 5vh
+        height: 5vh
+
+.result::-webkit-scrollbar-track
+    background: #000
+    border-radius: 1vh
+
+.result::-webkit-scrollbar
+    width: 1vh
+
+.result::-webkit-scrollbar-thumb
+    border-radius: 1vh
+    background-color: #fbff00
+    box-shadow: inset 0 0 2px #ffffff
+
+@media screen and ( max-width: 768px )
+    .result
+        right: 0
