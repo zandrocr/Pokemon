@@ -9,14 +9,14 @@ const Home = (props) => {
 		window.scrollTo({ top: 0 })
 	}, [])
 
-	const box = document.querySelectorAll(".top")
-	const box2 = document.querySelectorAll(".md")
-	const [sumHeight, setSumHeight] = useState(0)
-	setTimeout(() => {
-		if (box[0]) {
-			setSumHeight(box[0].clientHeight + box2[0].clientHeight + 200)
-		}
-	}, 1000)
+	// const box = document.querySelectorAll(".top")
+	// const box2 = document.querySelectorAll(".md")
+	// const [sumHeight, setSumHeight] = useState(0)
+	// setTimeout(() => {
+	// 	if (box[0]) {
+	// 		setSumHeight(box[0].clientHeight + box2[0].clientHeight + 200)
+	// 	}
+	// }, 1000)
 
 	return (
 		<section id="home" className="col-12 d-flex flex-column align-items-center">

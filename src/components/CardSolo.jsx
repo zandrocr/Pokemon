@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
 import { ApiCard } from "../api/api"
 import { typeTwo } from "../api/typeTwo"
-import "../css/cardSolo.css"
 import ModalCard from "./ModalCard"
+import "../css/cardSolo.css"
 import "../css/home.css"
+import seta from "../img/icon/seta.png"
 
 const CardSolo = (props) => {
 	const [arrPoke, setArrPoke] = useState([])
@@ -60,33 +61,35 @@ const CardSolo = (props) => {
 				<ModalCard api={arrPoke} openModal={openModal} setOpenModal={setOpenModal} />
 			) : null}
 			<button onClick={prev} data-buttoncard="prev">
-				Ant
+				<img src={seta} alt="seta" />
 			</button>
 			<div className="cardDex col-12 d-flex flex-column align-items-center justify-content-between">
 				<div className="col-6 d-flex justify-content-around">
 					<div data-circle></div>
 					<div data-circle></div>
 				</div>
-				<section
-					data-card={typeTwo({ id: arrPoke })}
-					onClick={() => setOpenModal(!openModal)}
-					className="col-12 col-lg-10 d-flex flex-column align-items-center justify-content-between">
-					<div id="image" className="col-11 col-lg-4 d-flex justify-content-center">
-						<img
-							src={arrPoke.sprites ? spritesDef() : null}
-							alt={arrPoke.name}
-							className="col-12"
-						/>
-					</div>
-					<h6 data-id={typeTwo({ id: arrPoke })}># {arrPoke.id}</h6>
-					<div
-						data-eps={typeTwo({ id: arrPoke })}
-						className="col-12 d-flex flex-column align-items-center justify-content-around">
-						<div className="col-11 d-flex justify-content-center">
-							<h3>{arrPoke.name}</h3>
+				<div className="displayCard col-10 d-flex flex-column align-items-center justify-content-center">
+					<section
+						data-card={typeTwo({ id: arrPoke })}
+						onClick={() => setOpenModal(!openModal)}
+						className="col-lg-11 d-flex flex-column align-items-center justify-content-between">
+						<div id="image" className="col-11 col-lg-4 d-flex justify-content-center">
+							<img
+								src={arrPoke.sprites ? spritesDef() : null}
+								alt={arrPoke.name}
+								className="col-12"
+							/>
 						</div>
-					</div>
-				</section>
+						<h6 data-id={typeTwo({ id: arrPoke })}># {arrPoke.id}</h6>
+						<div
+							data-eps={typeTwo({ id: arrPoke })}
+							className="col-12 d-flex flex-column align-items-center justify-content-around">
+							<div className="col-11 d-flex justify-content-center">
+								<h3>{arrPoke.name}</h3>
+							</div>
+						</div>
+					</section>
+				</div>
 				<div className="backHome col-10 d-flex align-items-center justify-content-between">
 					<div data-circle="down"></div>
 					<div data-bugline className="">
@@ -98,7 +101,7 @@ const CardSolo = (props) => {
 				</div>
 			</div>
 			<button data-buttoncard="next" onClick={nex} className="prox">
-				Prox
+				<img src={seta} alt="seta" />
 			</button>
 			<div className="movi d-flex flex-column align-items-center">
 				<h4>Movimentos</h4>
