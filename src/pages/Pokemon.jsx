@@ -28,15 +28,17 @@ const Pokemon = (props) => {
 	}, [])
 
 	function map() {
-		if (arrPoke.id <= 150) {
+		if (arrPoke.id <= 151) {
 			return kantoMap
 		} else if (arrPoke.id <= 251) {
 			return johto
 		} else if (arrPoke.id <= 386) {
-			return sinnoh
+			return hoenn
 		} else if (arrPoke.id <= 494) {
-			return unova
+			return sinnoh
 		} else if (arrPoke.id <= 649) {
+			return unova
+		} else if (arrPoke.id <= 721) {
 			return kalos
 		} else {
 			return alola

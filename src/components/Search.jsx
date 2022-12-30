@@ -43,7 +43,7 @@ const Search = (props) => {
 							<Link
 								key={i}
 								onClick={apagar}
-								to={`/pokemon/${pokemon.data.id}`}
+								to={`/pokemon/${pokemon.data.name}`}
 								className="col-12 col-lg-10 d-flex justify-content-center">
 								<CardSearch
 									name={pokemon.data.name}
