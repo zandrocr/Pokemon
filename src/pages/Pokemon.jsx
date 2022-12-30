@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 //css
 import "../css/pokemon.css"
 import ModalCard from "../components/ModalCard"
-import kantoMap from "../img/maps/kantoMap.png"
+import kanto from "../img/maps/kantoMap.png"
 import johto from "../img/maps/JohtoMap.png"
 import hoenn from "../img/maps/Hoenn_ORAS.png"
 import sinnoh from "../img/maps/Sinnoh_BDSP_artwork.png"
@@ -29,7 +29,7 @@ const Pokemon = (props) => {
 
 	function map() {
 		if (arrPoke.id <= 151) {
-			return johto
+			return kanto
 		} else if (arrPoke.id <= 251) {
 			return johto
 		} else if (arrPoke.id <= 386) {
