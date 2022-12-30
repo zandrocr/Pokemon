@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 //css
 import "../css/pokemon.css"
 import ModalCard from "../components/ModalCard"
-import kanto from "../img/maps/JohtoMap.png"
+import kanto from "../img/maps/kantoMap.png"
 import johto from "../img/maps/JohtoMap.png"
 import hoenn from "../img/maps/Hoenn_ORAS.png"
 import sinnoh from "../img/maps/Sinnoh_BDSP_artwork.png"
@@ -18,7 +18,7 @@ const Pokemon = (props) => {
 	const [arrPoke, setArrPoke] = useState([])
 
 	function api() {
-		ApiCard({ setState: setArrPoke, pokemon: id })
+		ApiCard({ setState: setArrPoke, pokemon: 5 })
 	}
 
 	const movesPokemon = arrPoke.moves ? [arrPoke.moves] : null
