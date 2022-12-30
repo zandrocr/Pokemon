@@ -27,8 +27,8 @@ function App() {
 				<Routes>
 					<Route exact path="/" element={<Home api={pokemons} />} />
 					<Route path="/cardSolo" element={<CardSolo api={pokemons} />} />
-					<Route path="/pokemon/:id" element={<Pokemon />} />
 					<Route path="/pokedex" element={<Pokedex api={pokemons} />} />
+					{/* <Route path="/pokemon/:id" element={<Pokemon />} /> */}
 				</Routes>
 				<Footer />
 				<Navbar api={pokemons} />
