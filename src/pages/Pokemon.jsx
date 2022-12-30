@@ -18,7 +18,7 @@ const Pokemon = (props) => {
 	const [arrPoke, setArrPoke] = useState([])
 
 	function api() {
-		ApiCard({ setState: setArrPoke, pokemon: id })
+		ApiCard({ setState: setArrPoke, pokemon: !id ? 1 : id })
 	}
 
 	const movesPokemon = arrPoke.moves ? [arrPoke.moves] : null
