@@ -56,7 +56,7 @@ const CardSolo = (props) => {
 		<section
 			id="cardSolo"
 			className="col-12 d-flex flex-column justify-content-around align-items-center">
-			{openModal == true ? (
+			{/* {openModal == true ? (
 				<ModalCard api={arrPoke} openModal={openModal} setOpenModal={setOpenModal} />
 			) : null}
 			<button onClick={prev} data-buttoncard="prev">
@@ -117,7 +117,7 @@ const CardSolo = (props) => {
 							: null}
 					</div>
 				</div>
-			</div>
+			</div> */}
 		</section>
 	)
 }

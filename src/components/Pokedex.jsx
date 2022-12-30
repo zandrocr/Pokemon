@@ -24,7 +24,7 @@ const Pokedex = (props) => {
 		<section
 			id="Pokedex"
 			className="col-12 d-flex flex-column align-items-center justify-content-center">
-			<div className="col-11 d-flex flex-wrap">
+			{/* <div className="col-11 d-flex flex-wrap">
 				{currentItems.map((pokemon, index) => {
 					return (
 						<div
@@ -62,7 +62,7 @@ const Pokedex = (props) => {
 					activeLinkClassName="activeLink"
 					className="d-flex col-12 col-lg-10 justify-content-around"
 				/>
-			</div>
+			</div> */}
 		</section>
 	)
 }
