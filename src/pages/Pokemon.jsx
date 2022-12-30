@@ -29,7 +29,7 @@ const Pokemon = (props) => {
 
 	function map() {
 		if (arrPoke.id <= 151) {
-			return kantoMap
+			return johto
 		} else if (arrPoke.id <= 251) {
 			return johto
 		} else if (arrPoke.id <= 386) {
@@ -49,7 +49,7 @@ const Pokemon = (props) => {
 		<section
 			data-pokemon
 			className="col-12 d-flex flex-column justify-content-around align-items-center">
-			{/* {!arrPoke.name && <Load />} */}
+			{!arrPoke.name && <Load />}
 			<ModalCard api={arrPoke} />
 			<div data-sprites>
 				<h4>Referências</h4>
