@@ -1,0 +1,23 @@
+.load
+    top: 0
+    left: 0
+    z-index: 30
+    height: 100vh
+    position: fixed
+    background: #000000bd
+
+    img
+        height: 70vh
+        animation: roda linear infinite 2s
+
+@keyframes roda
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+
+@media screen and ( max-width: 768px )
+    .load
+        img
+            height: 40vh
+

@@ -48,7 +48,7 @@ const Navbar = (props) => {
 				<section
 					data-buttonmenu="closeBar"
 					onClick={openBarSearch}
-					className="d-flex d-md-none  flex-column justify-content-center align-items-center">
+					className="d-flex d-md-none">
 					<img src={closeBar} alt="colseBar" />
 				</section>
 			</div>

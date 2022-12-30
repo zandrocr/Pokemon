@@ -1,5 +1,5 @@
-import { useRef } from "react"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import "../css/search.css"
 import CardSearch from "./CardSearch"
 
@@ -21,10 +21,12 @@ const Search = (props) => {
 		setArray(api.filter((name) => name.data.name.toLowerCase().includes(filter.toLowerCase())))
 	}, [filter, api])
 
-	function test(e){
-		// console.log(tet)
+	function apagar() {
+		setFilter("")
+		setTimeout(() => {
+			window.location.reload(true)
+		}, [])
 	}
-
 
 	function result() {
 		if (filter.length >= 1 && array.length == 0) {
@@ -38,10 +40,11 @@ const Search = (props) => {
 				<section className="result col-12 col-lg-12 d-flex flex-column align-items-center">
 					{array.map((pokemon, i) => {
 						return (
-							<div
+							<Link
 								key={i}
-								className="col-12 col-lg-10 d-flex justify-content-center"
-								>
+								onClick={apagar}
+								to={`/pokemon/${pokemon.data.name}`}
+								className="col-12 col-lg-10 d-flex justify-content-center">
 								<CardSearch
 									name={pokemon.data.name}
 									id={pokemon.data.id}
@@ -50,7 +53,7 @@ const Search = (props) => {
 									abilitys={pokemon.data.abilities}
 									stats={pokemon.data.stats}
 								/>
-							</div>
+							</Link>
 						)
 					})}
 				</section>

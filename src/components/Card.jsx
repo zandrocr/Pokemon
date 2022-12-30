@@ -28,7 +28,7 @@ const Card = (props) => {
 							: null
 					}
 					alt={pokemon.name}
-					className="col-6 col-md-3 col-lg-5"
+					className="col-6 col-md-3 col-lg-4"
 				/>
 				<h3>{pokemon.name}</h3>
 			</div>
@@ -37,3 +37,7 @@ const Card = (props) => {
 }
 
 export default Card
+
+// https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/${pokemon.id}.png
+
+// https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png

@@ -23,14 +23,11 @@ const CardSearch = (props) => {
 		}
 		return <h6>{props.types[0].type.name}</h6>
 	}
-	function pokemonId() {
-		console.log(props.id)
-	}
+
 	return (
 		<section
 			data-card={typeTwo}
 			id="cardSearch"
-			onClick={pokemonId}
 			className="col-12 d-flex flex-column flex-lg-row align-items-center justify-content-around">
 			<h6  data-id={typeTwo}>
 				# {props.id}

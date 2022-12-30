@@ -11,6 +11,7 @@ import sinnoh from "../img/maps/Sinnoh_BDSP_artwork.png"
 import unova from "../img/maps/Unova_B2W2_alt.png"
 import kalos from "../img/maps/Kalos_alt.png"
 import alola from "../img/maps/Alola_USUM_artwork.png"
+import Load from "../components/Load"
 
 const Pokemon = (props) => {
 	const { id } = useParams()
@@ -31,13 +32,13 @@ const Pokemon = (props) => {
 			return kantoMap
 		} else if (arrPoke.id <= 251) {
 			return johto
-		}else if (arrPoke.id <= 386) {
+		} else if (arrPoke.id <= 386) {
 			return sinnoh
-		}else if (arrPoke.id <= 494) {
+		} else if (arrPoke.id <= 494) {
 			return unova
-		}else if (arrPoke.id <= 649) {
+		} else if (arrPoke.id <= 649) {
 			return kalos
-		}else {
+		} else {
 			return alola
 		}
 	}
@@ -46,6 +47,7 @@ const Pokemon = (props) => {
 		<section
 			data-pokemon
 			className="col-12 d-flex flex-column justify-content-around align-items-center">
+			{!arrPoke.name && <Load />}
 			<ModalCard api={arrPoke} />
 			<div data-sprites>
 				<h4>Referências</h4>
