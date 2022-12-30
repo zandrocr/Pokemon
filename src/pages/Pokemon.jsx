@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 //css
 import "../css/pokemon.css"
 import ModalCard from "../components/ModalCard"
-import kanto from "../img/maps/kantoMap.png"
+import kanto from "../img/maps/JohtoMap.png"
 import johto from "../img/maps/JohtoMap.png"
 import hoenn from "../img/maps/Hoenn_ORAS.png"
 import sinnoh from "../img/maps/Sinnoh_BDSP_artwork.png"
