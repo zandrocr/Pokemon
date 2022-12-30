@@ -13,12 +13,12 @@ import kalos from "../img/maps/Kalos_alt.png"
 import alola from "../img/maps/Alola_USUM_artwork.png"
 import Load from "../components/Load"
 
-const Pokemon = (props) => {
+const Pokemon = () => {
 	const { id } = useParams()
 	const [arrPoke, setArrPoke] = useState([])
 
 	function api() {
-		ApiCard({ setState: setArrPoke, pokemon: !id ? 1 : id })
+		ApiCard({ setState: setArrPoke, pokemon: id })
 	}
 
 	const movesPokemon = arrPoke.moves ? [arrPoke.moves] : null
