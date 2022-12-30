@@ -23,16 +23,18 @@ function App() {
 
 	return (
 		<section className="App col-12 d-flex flex-column justify-content-center">
-			<BrowserRouter>
-				<Navbar api={pokemons} />
-				<Routes>
-					<Route exact path="/" element={<Home api={pokemons} />} />
-					<Route path="/cardSolo" element={<CardSolo api={pokemons} />} />
-					<Route path="/pokemon/:id" element={<Pokemon />} />
-					<Route path="/pokedex" element={<Pokedex api={pokemons} />} />
-				</Routes>
-				<Footer />
-			</BrowserRouter>
+			{pokemons ? (
+				<BrowserRouter>
+					<Navbar api={pokemons} />
+					<Routes>
+						<Route exact path="/" element={<Home api={pokemons} />} />
+						<Route path="/cardSolo" element={<CardSolo api={pokemons} />} />
+						<Route path="/pokemon/:id" element={<Pokemon />} />
+						<Route path="/pokedex" element={<Pokedex api={pokemons} />} />
+					</Routes>
+					<Footer />
+				</BrowserRouter>
+			) : null}
 		</section>
 	)
 }
