@@ -10,10 +10,9 @@ const CardSolo = (props) => {
 	const [arrPoke, setArrPoke] = useState([])
 	const [click, setClick] = useState(false)
 	const [selectCard, setSelectCard] = useState(1)
-	const [namePokemon, setNamePokemon] = useState("")
 
 	function api() {
-		ApiCard({ setState: setArrPoke, pokemon: namePokemon == "" ? selectCard : namePokemon })
+		ApiCard({ setState: setArrPoke, pokemon: selectCard })
 	}
 
 	function prev() {

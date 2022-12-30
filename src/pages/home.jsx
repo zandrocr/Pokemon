@@ -3,6 +3,7 @@ import "../css/home.css"
 import CardConj from "../components/CardConju"
 import { useEffect } from "react"
 import { useState } from "react"
+import CardSolo from "../components/CardSolo"
 
 const Home = (props) => {
 	useEffect(() => {
@@ -55,6 +56,7 @@ const Home = (props) => {
 					</div>
 				</div>
 			</div>
+			<CardSolo />
 		</section>
 	)
 }
