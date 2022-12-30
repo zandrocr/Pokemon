@@ -26,7 +26,7 @@ function App() {
 			<BrowserRouter>
 				<Navbar api={pokemons} />
 				<Routes>
-					<Route path="/" element={<Home api={pokemons} />} />
+					<Route exact path="/" element={<Home api={pokemons} />} />
 					<Route path="/cardSolo" element={<CardSolo api={pokemons} />} />
 					<Route path="/pokemon/:id" element={<Pokemon />} />
 					<Route path="/pokedex" element={<Pokedex api={pokemons} />} />
