@@ -76,7 +76,7 @@ const Pokemon = () => {
 					/>
 				</div>
 			</div>
-			<div className="d-flex flex-column align-items-center">
+			<div className="col-12 d-flex flex-column align-items-center">
 				<h4>RefMap</h4>
 				<img src={map()} alt="map" className="col-12" />
 			</div>

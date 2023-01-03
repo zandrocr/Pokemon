@@ -18,7 +18,7 @@ function App() {
 	const [pokemons, setPokemons] = useState([])
 
 	useEffect(() => {
-		ApiPoke({ set: setPokemons, state: pokemons })
+		ApiPoke({ set: setPokemons })
 	}, [])
 
 	return (
