@@ -4,16 +4,7 @@ import ImgPoke from "../img/icon/pokemon.png"
 import "../css/modalcard.css"
 
 const ModalCard = (props) => {
-	function types() {
-		if (props.api.types) {
-			return (
-				<div>
-					<p>{props.api.types[0].type.name}</p>
-					{props.api.types[1] ? <p>{props.api.types[1].type.name}</p> : null}
-				</div>
-			)
-		}
-	}
+	const statsPokemon = props.api.stats ? [props.api.stats] : null
 
 	const allAbility = props.api.abilities ? [props.api.abilities] : null
 	function abilitysPokemon() {
@@ -39,7 +30,16 @@ const ModalCard = (props) => {
 		}
 	}
 
-	const statsPokemon = props.api.stats ? [props.api.stats] : null
+	function types() {
+		if (props.api.types) {
+			return (
+				<div>
+					<p>{props.api.types[0].type.name}</p>
+					{props.api.types[1] ? <p>{props.api.types[1].type.name}</p> : null}
+				</div>
+			)
+		}
+	}
 
 	return (
 		<section

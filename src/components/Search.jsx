@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react"
+import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import "../css/search.css"
 import CardSearch from "./CardSearch"
+import "../sass/search.sass"
 
 const Search = (props) => {
 	const api = props.api
@@ -46,10 +46,10 @@ const Search = (props) => {
 								to={`/pokemon/${pokemon.data.name}`}
 								className="col-12 col-lg-10 d-flex justify-content-center">
 								<CardSearch
+									type={pokemon}
 									name={pokemon.data.name}
 									id={pokemon.data.id}
 									sprite={pokemon.data.sprites.front_default}
-									types={pokemon.data.types}
 									abilitys={pokemon.data.abilities}
 									stats={pokemon.data.stats}
 								/>
@@ -66,7 +66,7 @@ const Search = (props) => {
 			<input
 				type="text"
 				placeholder="Procure aqui seu Pokemon!!!"
-				className="col-12"
+				className="col-12 col-md-6 col-lg-10"
 				onChange={filt}
 				value={filter}
 			/>

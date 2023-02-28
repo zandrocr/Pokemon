@@ -10,9 +10,9 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Home from "./pages/home"
 import Footer from "./components/Footer"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import CardSolo from "./components/CardSolo"
+import CardSolo from "./pages/CardSolo"
 import Pokemon from "./pages/Pokemon"
-import Pokedex from "./components/Pokedex"
+import Pokedex from "./pages/Pokedex"
 
 function App() {
 	const [pokemons, setPokemons] = useState([])
@@ -25,7 +25,7 @@ function App() {
 		<section className="App col-12 d-flex flex-column justify-content-center">
 			<BrowserRouter>
 				<Routes>
-					<Route exact path="/" element={<Home api={pokemons} />} />
+					<Route exact path="/" element={<Home />} />
 					<Route path="/cardSolo" element={<CardSolo api={pokemons} />} />
 					<Route path="/pokedex" element={<Pokedex api={pokemons} />} />
 					<Route path="/pokemon/:id" element={<Pokemon />} />

@@ -7,6 +7,8 @@ nav
     box-shadow: 0px 0px 20px #000000
 
     [data-buttonmenu]
+        position: absolute
+        right: 3vh
         width: 6vh
         height: 6vh
         padding: 1vh
@@ -15,35 +17,35 @@ nav
         background: #fbff00
         box-shadow: 0px 0px 20px #000000
 
+        img
+            width: 3vh
+
         [data-menu]
             height: 1vh
-            width: 5vh
+            width: 3vh
             transition: .5s
             border-radius: 2vh
             background: #000000
             position: absolute
 
         [data-menu='left']
-            top: 2vh
+            top: 1.5vh
             transform: rotate(60deg)
 
         [data-menu='leftOpen']
-            top: 2vh
+            top: 1vh
             transform: rotate(30deg)
 
         [data-menu='right']
-            bottom: 2vh
+            bottom: 1.5vh
             transform: rotate(60deg)
 
         [data-menu='rightOpen']
-            bottom: 2vh
+            bottom: 1vh
             transform: rotate(30deg)
 
-    [data-buttonmenu]
-        img
-            width: 3vh
-
     [data-buttonmenu='inputBar']
+        right: 20vh
         height: 6vh
         width: 6vh
         display: none

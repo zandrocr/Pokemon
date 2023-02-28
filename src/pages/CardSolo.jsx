@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { ApiCard } from "../api/api"
 import { typeTwo } from "../api/typeTwo"
-import ModalCard from "./ModalCard"
+import ModalCard from "../components/ModalCard"
 import "../css/cardSolo.css"
 import "../css/home.css"
 import seta from "../img/icon/seta.png"

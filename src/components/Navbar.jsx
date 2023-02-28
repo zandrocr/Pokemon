@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "../css/navbar.css"
+import "../sass/navbar.sass"
 import Search from "./Search"
 import { Link } from "react-router-dom"
 import closeBar from "../img/icon/close.png"
@@ -29,6 +29,17 @@ const Navbar = (props) => {
 				/>
 			</Link>
 			<div
+				data-search={openSearch == true ? "open" : ""}
+				className="col-12 col-lg-6 d-flex align-items-center">
+				<Search api={props.api} cleanBar={openSearch} />
+				<section
+					data-buttonmenu="closeBar"
+					onClick={openBarSearch}
+					className="d-flex d-md-none">
+					<img src={closeBar} alt="colseBar" />
+				</section>
+			</div>
+			<div
 				data-modal={button == true ? "open" : ""}
 				className="col-7 col-lg-3 d-flex flex-column align-items-center justify-content-around">
 				<Link to="/" onClick={closeButton}>
@@ -41,18 +52,6 @@ const Navbar = (props) => {
 					Lista Pokemon
 				</Link>
 			</div>
-			<div
-				data-search={openSearch == true ? "open" : ""}
-				className="col-12 col-lg-6 d-flex align-items-center">
-				<Search api={props.api} cleanBar={openSearch} />
-				<section
-					data-buttonmenu="closeBar"
-					onClick={openBarSearch}
-					className="d-flex d-md-none">
-					<img src={closeBar} alt="colseBar" />
-				</section>
-			</div>
-
 			<div className="d-flex col-4 col-md-2 col-lg-1 justify-content-between align-items-center justify-content-lg-end">
 				<section
 					data-buttonmenu="inputBar"

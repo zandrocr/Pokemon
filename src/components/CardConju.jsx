@@ -1,6 +1,6 @@
 import { Carousel } from "react-bootstrap"
 import Card from "./Card"
-import '../css/cardConju.css'
+import "../css/cardConju.css"
 
 const CardConj = (props) => {
 	const interval = 3000

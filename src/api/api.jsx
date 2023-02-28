@@ -1,15 +1,23 @@
 import axios from "axios"
 
 export const ApiPoke = (props) => {
-	let arrPoke = []
+		let arrPoke = []
 
-	for (let i = 1; i < 900; i++) {
-		arrPoke.push(`https://pokeapi.co/api/v2/pokemon/${i}`)
-	}
-	axios
-		.all(arrPoke.map((Pk) => axios.get(Pk)))
-		.then((response) => props.set(response))
-		.catch(console.error)
+		// axios
+		// .create({
+		// 	baseURL: "https://pokeapi.co/api/v2/",
+		// })
+		// .get(`/pokemon?limit=5`)
+		// .then((response) => props.set(response.data.results))
+		// .catch((error) => console.log(error))
+
+		for (let i = 1; i <= 250; i++) {
+			arrPoke.push(`https://pokeapi.co/api/v2/pokemon/${i}`)
+		}
+		axios
+			.all(arrPoke.map((Pk) => axios.get(Pk)))
+			.then((response) => props.set(response))
+			.catch(console.error)
 }
 
 export const ApiCard = async (props) => {

@@ -1,6 +1,6 @@
 //components
 import { useState } from "react"
-import CardList from "./CardList"
+import CardList from "../components/CardList"
 import ReactPaginate from "react-paginate"
 import "../css/pagination.css"
 import { Link } from "react-router-dom"

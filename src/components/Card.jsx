@@ -19,7 +19,7 @@ const Card = (props) => {
 			to={`/pokemon/${pokemon.id}`}
 			id="card"
 			data-card={typeTwo({ id: pokemon })}
-			className=" d-flex flex-column align-items-center justify-content-around">
+			className="d-flex flex-column align-items-center justify-content-around">
 			<div className="d-flex flex-column align-items-center">
 				<img
 					src={
@@ -37,7 +37,3 @@ const Card = (props) => {
 }
 
 export default Card
-
-// https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/${pokemon.id}.png
-
-// https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png

@@ -1,23 +1,21 @@
+import { useEffect, useState } from "react"
+import CardConj from "../components/CardConju"
 import imgPoke from "../img/icon/LogoPokemon.png"
 import "../css/home.css"
-import CardConj from "../components/CardConju"
-import { useEffect } from "react"
-import { useState } from "react"
-import CardSolo from "../components/CardSolo"
+import axios from "axios"
 
-const Home = (props) => {
+const Home = () => {
 	useEffect(() => {
 		window.scrollTo({ top: 0 })
 	}, [])
 
-	// const box = document.querySelectorAll(".top")
-	// const box2 = document.querySelectorAll(".md")
-	// const [sumHeight, setSumHeight] = useState(0)
-	// setTimeout(() => {
-	// 	if (box[0]) {
-	// 		setSumHeight(box[0].clientHeight + box2[0].clientHeight + 200)
-	// 	}
-	// }, 1000)
+	// axios
+	// 	.create({
+	// 		baseURL: "https://pokeapi.co/api/v2/",
+	// 	})
+	// 	.get(`/pokemon?limit=5`)
+	// 	.then((response) => console.log(response.data.results))
+	// 	.catch((error) => console.log(error))
 
 	return (
 		<section id="home" className="col-12 d-flex flex-column align-items-center">
@@ -36,11 +34,7 @@ const Home = (props) => {
 						<CardConj region="Kanto" id1={1} id2={4} id3={7} />
 						<CardConj region="Johto" id1={152} id2={155} id3={158} />
 						<CardConj region="Hoenn" id1={252} id2={255} id3={258} />
-					</div>
-					<div className="col-10">
 						<CardConj region="Sinnoh" id1={387} id2={390} id3={393} />
-					</div>
-					<div className="col-10 d-flex flex-column justify-content-around">
 						<CardConj region="Unova" id1={495} id2={498} id3={501} />
 						<CardConj region="Kalos" id1={650} id2={653} id3={656} />
 						<CardConj region="Alola" id1={722} id2={725} id3={728} />

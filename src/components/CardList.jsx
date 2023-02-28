@@ -1,10 +1,12 @@
+import axios from "axios"
+import { useEffect } from "react"
 import { useState } from "react"
 import "../css/cardList.css"
 
 const CardList = (props) => {
 	const [typeTwo, setTypeTwo] = useState([])
 
-	setTimeout(() => {
+	useEffect(() => {
 		if (props.types[1] && props.types[0].type.name === "normal") {
 			return setTypeTwo(props.types[1].type.name)
 		}
@@ -66,7 +68,7 @@ const CardList = (props) => {
 			data-card={typeTwo}
 			className="col-12 d-flex flex-column align-items-center justify-content-between">
 			<div id="image" className="col-7 col-lg-6 d-flex justify-content-center">
-				<img src={spritesDef()} alt={props.name} className="col-12" />
+				<img src={props.sprites.front_default} alt={props.name} className="col-12" />
 			</div>
 			<h6 data-id={typeTwo}># {props.id}</h6>
 			<div
